@@ -3,7 +3,7 @@ set -euo pipefail
 
 shell=bash
 
-ECO_CI_SEND_DATA='true' # turn this off if you do not want to use the web dashboard on https://metrics.green-coding.io
+ECO_CI_SEND_DATA='false' # turn this off if you do not want to use the web dashboard on https://metrics.green-coding.io
 
 # If you want filter data in the GMT Dashboard or in CarbonDB you can here manually set data for drill-down later
 # The values given are just some default recommendations
@@ -13,7 +13,7 @@ ECO_CI_FILTER_MACHINE='local-runner'
 ECO_CI_FILTER_TAGS='' # Tags must be comma separated. Tags cannot have commas itself or contain quotes
 
 ECO_CI_CO2_CALCULATION_METHOD="constant"
-ECO_CI_CO2_GRID_INTENSITY_CONSTANT=334 # for Germany in 2024 from https://app.electricitymaps.com/zone/DE/all/yearly
+ECO_CI_CO2_GRID_INTENSITY_CONSTANT=CH # for Germany in 2024 from https://app.electricitymaps.com/zone/DE/all/yearly
 ECO_CI_CO2_GRID_INTENSITY_API_TOKEN=""
 
 ECO_CI_JOB_ID=${BUILD_ID:-}
